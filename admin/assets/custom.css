@@ -1,0 +1,35 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17-Sep-2015, 11:23:50
+    Author     : shiri
+*/
+
+a{
+    cursor: pointer;
+}
+.dataTables_filter{
+	width:50%;
+}
+.dataTables_filter label{
+	width:100%;
+}
+.dataTables_filter label input.form-control{
+	width:90% !important;
+}
+.wrapping-text{
+	display: inline-block;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+.sidebar-menu > li.active{
+	border-left:3px solid #4A89DC;
+}

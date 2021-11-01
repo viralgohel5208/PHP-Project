@@ -1,0 +1,107 @@
+<?php
+
+//include connection file 
+require_once "../db.php";
+require_once "../universal.php";
+require_once "../define.php";
+require_once "login-required.php";
+require_once "../functions.php";
+require_once "../functions-list.php";
+require_once "../functions-mysql.php";
+
+// initilize all variable
+$params = $columns = $totalRecords = $data = array();
+
+$params = $_REQUEST;
+
+//echo "<pre>";print_r($_REQUEST);exit;
+
+//define index of column
+$columns = array(
+	0 => 'id',
+	1 => 'customer_name', 
+	2 => 'order_number', 
+	3 => 'price_total', 
+	4 => 'created_at',
+	5 => 'payment_sub',
+	6 => 'status',
+);
+
+$where = $sqlTot = $sqlRec = "";
+
+if(isset($_GET['id']))
+{
+	$where .= "WHERE O.app_id = $app_id AND O.store_id = ".$_GET['id'];
+}
+
+// check search value exist
+if( !empty($params['search']['value']) ) {
+	$where .=" AND ";
+	$where .=" ( ";
+	$where .=" U.first_name LIKE '".$params['search']['value']."%' ";
+	$where .=" OR U.last_name LIKE '".$params['search']['value']."%' ";
+	$where .=" OR order_number LIKE '".$params['search']['value']."%' ";
+	$where .=" OR price_total LIKE '".$params['search']['value']."%' ";
+	$where .=" )";
+}
+
+// getting total number records without any search
+$sql = "SELECT O.id, C.first_name, C.last_name, order_number, price_total, O.created_at, payment_sub, O.status FROM `orders` AS O INNER JOIN customers AS C ON C.id = O.customer_id ";
+$sqlTot .= $sql;
+$sqlRec .= $sql;
+//concatenate search sql if value exist
+if(isset($where) && $where != '')
+{
+	$sqlTot .= $where;
+	$sqlRec .= $where;
+}
+
+if($params['order'][0]['column'] == 0)
+{
+	$column_name = 'id DESC';
+}
+else
+{
+	$column_name = $columns[$params['order'][0]['column']]."   ".$params['order'][0]['dir'];
+}
+
+$sqlRec .=  " ORDER BY ". $column_name." LIMIT ".$params['start']." ,".$params['length']." ";
+
+//echo $sqlRec;
+
+$queryTot = mysqli_query($link, $sqlTot) or die("database error:". mysqli_error($link));
+
+$totalRecords = mysqli_num_rows($queryTot);
+
+$queryRecords = mysqli_query($link, $sqlRec) or die("error to fetch data");
+
+$k = $_REQUEST['start'] + 1;
+
+//iterate on results row and create new index array of data
+while( $row = mysqli_fetch_row($queryRecords) ) {
+	$pri_id = $row[0];
+	$row[0] = $k;
+	$row[1] = $row[1].' '.$row[2];
+	$row[2] = $row[3];
+	$row[3] = $row[4];
+	$row[4] = $row[5];
+	$row[5] = getPaymentSub($row[6]);
+	$row[6] = getDeliveryStatus($row[7]);
+	$row[7] = '<td>';
+	$row[7] .= '<a href="orders-invoice.php?id='.$pri_id.'" class="btn btn-success btn-xs"> &nbsp;<i class="fa fa-pencil"></i></a>';
+	//$row[7] .= '<a onclick="delete_func(\''.$pri_id.'\')" class="btn btn-danger btn-xs next-btn"> &nbsp;<i class="fa fa-times"></i></a>';
+	$row[7] .= '</td>';
+	$data[] = $row;
+	$k++;
+}	
+
+$json_data = array(
+		"draw"            => intval( $params['draw'] ),   
+		"recordsTotal"    => intval( $totalRecords ),  
+		"recordsFiltered" => intval($totalRecords),
+		"data"            => $data   // total data array
+		);
+
+echo json_encode($json_data);  // send data as json format
+
+?>

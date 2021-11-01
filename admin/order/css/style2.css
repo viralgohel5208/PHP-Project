@@ -1,0 +1,20 @@
+/*
+	 CSS-Tricks Example
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+.delete-wpr { position: relative; }
+.delete { 
+	display: block; 
+	color: #F44336; 
+	text-decoration: none; 
+	position: absolute; 
+	font-weight: bold; 
+	padding: 0px 3px; 
+	border: 1px solid; 
+	top: 0; 
+	left: -22px; 
+	font-family: Verdana; 
+	font-size: 12px;
+}
