@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Mar 30, 2018 at 11:10 AM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Host: 127.0.0.1
+-- Generation Time: Nov 01, 2021 at 10:55 AM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -51,8 +51,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `app_id`, `role_id`, `first_name`, `last_name`, `email`, `mobile`, `password`, `otp_code`, `otp_expiry_time`, `created_by`, `updated_by`, `created_at`, `updated_at`, `status`) VALUES
-(1, NULL, 1, 'Shirish', 'Makwana', 'shirishm.makwana@gmail.com', '9924400799', 'WHhIdklmcEp4dDNhclpjR0JkMWVNQT09', 'FQZNTAmMoaOeww6QL6EU', '2018-02-19 14:36:13', NULL, NULL, '2017-11-30 11:11:16', '2017-11-30 11:11:16', 1),
-(2, 1, 2, 'Admin', 'A', 'admin@admin.com', '9773179968', 'Zk5tdE1GWjZhSFQ2STRhTXo3cHhSZz09', NULL, NULL, 1, 1, '2018-02-23 15:01:26', '2018-02-23 15:01:26', 1),
+(1, NULL, 1, 'Shirish', 'Makwana', 'varun@lucsoninfotech.com', '9924400799', 'TVdlcTdLWGhRb01rTDVUZVF4NTQ5QT09', 'FQZNTAmMoaOeww6QL6EU', '2018-02-19 14:36:13', NULL, NULL, '2017-11-30 11:11:16', '2017-11-30 11:11:16', 1),
+(2, 1, 2, 'Admin', 'A', 'admin@admin.com', '9773179968', 'TVdlcTdLWGhRb01rTDVUZVF4NTQ5QT09', NULL, NULL, 1, 1, '2018-02-23 15:01:26', '2018-02-23 15:01:26', 1),
 (3, 2, 2, 'Nayan', 'Bhai', 'nyu212@yahoo.in', '8160016956', 'R0Z4YUZJNnlTVXVLbDRSRUZQK2xNTTlmMW5uL3NLOEJhWGRENWorSFRTND0=', NULL, NULL, 1, 1, '2018-02-23 15:04:54', '2018-02-23 15:04:54', 1),
 (4, 3, 2, 'Dilip', 'Davda', 'davdatradelink2011@gmail.com', '9426431305', 'NDFBc0dqK0FISEw4SFdRMlRoL0pUdz09', NULL, NULL, 1, 1, '2018-02-28 16:33:24', '2018-02-28 16:33:24', 1),
 (5, 4, 2, 'Anuj', 'Solanki', 'anujsolanki2622@gmail.com', '9879211948', 'YkJXNlBhb1paWFdHRk1qRDQ0bC9zdz09', NULL, NULL, 1, 1, '2018-02-28 16:33:53', '2018-02-28 16:33:53', 1),
@@ -123,11 +123,12 @@ CREATE TABLE `app_details` (
 
 INSERT INTO `app_details` (`id`, `app_id`, `app_name`, `app_tagline`, `logo_top`, `logo_center`, `logo_bottom`, `logo_favicon`, `mobile_1`, `mobile_2`, `email_1`, `email_2`, `website_url`, `address`, `city_id`, `city_name`, `state_id`, `state_name`, `country_id`, `country_name`, `pincode`, `facebook_url`, `twitter_url`, `google_plus`, `instagram_url`, `created_at`, `updated_at`, `status`) VALUES
 (1, 2, 'Attitude Boutique', '', '', '', '', '', '8160016956', '', 'nyu212@yahoo.in', '', '', 'Jamnagar', 25, 'Jamnagar', 12, 'Gujarat', 99, 'India', '361001', '', '', '', '', '0000-00-00 00:00:00', '2018-02-24 11:11:42', 1),
-(2, 1, 'Lucson eStore', '', '1519456262-7304.png', '1519456262-1278.png', '1519456262-1627.png', '', 'info@lucsoninfotech.', '', '', '', '', 'Rajkot', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', '360002', '', '', '', '', '0000-00-00 00:00:00', '2018-02-24 12:41:02', 1),
+(2, 1, 'Lucson eStore', '', '1580204012-3181.png', '1519456262-1278.png', '1519456262-1627.png', '', 'info@lucsoninfotech.', '', '', '', '', 'Rajkot', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', '360002', '', '', '', '', '0000-00-00 00:00:00', '2020-01-28 15:03:32', 1),
 (3, 3, 'Davda Tradelink', '', '', '', '', '', '9426431305', '', '', '', '', 'Rajkot', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', '360001', '', '', '', '', '0000-00-00 00:00:00', '2018-02-28 17:06:10', 1),
 (4, 4, 'Swastik & Solanki', '', '', '', '', '', '9879211948', '', '', '', '', 'Rajkot', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', '360001', '', '', '', '', '0000-00-00 00:00:00', '2018-02-28 17:13:57', 1),
 (5, 5, 'Vinayak Jewellers', '', '', '', '', '', '9574109573', '', '', '', '', 'Rajkot', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', '360001', '', '', '', '', '0000-00-00 00:00:00', '2018-02-28 17:23:55', 1),
-(6, 6, 'Gurukrupa Enterprise', '', '', '', '', '', '9310897108', '', '', '', '', 'Rajkot', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', '360001', '', '', '', '', '0000-00-00 00:00:00', '2018-02-28 17:24:47', 1);
+(6, 6, 'Gurukrupa Enterprise', '', '', '', '', '', '9310897108', '', '', '', '', 'Rajkot', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', '360001', '', '', '', '', '0000-00-00 00:00:00', '2018-02-28 17:24:47', 1),
+(7, 0, '', '', '', '', '', '', '', '', '', '', '', '', 0, '', 0, '', 0, '', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -139,7 +140,7 @@ CREATE TABLE `app_display_options` (
   `id` int(10) UNSIGNED NOT NULL,
   `app_id` int(10) UNSIGNED NOT NULL,
   `categories_menu` varchar(264) NOT NULL,
-  `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `updated_at` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -219,8 +220,8 @@ CREATE TABLE `app_settings` (
   `available_payment_sub` varchar(64) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Payment Sub : Cash on delivery : 0 - By Cash, 1 = By Paytm, 2 = By Card swipe',
   `sms_username` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
   `sms_password` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
-  `can_create_customer_backend` tinyint(1) NOT NULL DEFAULT '0',
-  `premium_normal_customer` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '0 = No, 1 = Prem/Normal Customer FIlter Applied',
+  `can_create_customer_backend` tinyint(1) NOT NULL DEFAULT 0,
+  `premium_normal_customer` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT '0 = No, 1 = Prem/Normal Customer FIlter Applied',
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -294,7 +295,7 @@ CREATE TABLE `brands` (
   `file_name` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `status` tinyint(4) UNSIGNED NOT NULL DEFAULT '1' COMMENT '0 = Inactive, 1 = Active'
+  `status` tinyint(4) UNSIGNED NOT NULL DEFAULT 1 COMMENT '0 = Inactive, 1 = Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -373,7 +374,7 @@ CREATE TABLE `categories` (
   `file_name` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `status` tinyint(4) UNSIGNED NOT NULL DEFAULT '1' COMMENT '0 = Inactive, 1 = Active'
+  `status` tinyint(4) UNSIGNED NOT NULL DEFAULT 1 COMMENT '0 = Inactive, 1 = Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -848,7 +849,7 @@ INSERT INTO `countries` (`id`, `iso`, `country_name`, `nicename`, `iso3`, `numco
 CREATE TABLE `customers` (
   `id` int(10) UNSIGNED NOT NULL,
   `app_id` int(10) UNSIGNED NOT NULL,
-  `customer_type` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '0 - Normal User, 1 = Premium User',
+  `customer_type` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT '0 - Normal User, 1 = Premium User',
   `user_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `first_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `last_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
@@ -857,8 +858,8 @@ CREATE TABLE `customers` (
   `password` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
   `file_name` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
   `gender` tinyint(3) UNSIGNED NOT NULL COMMENT '0 = Not Added, 1 = Male, 2 = Female, 3 = Other',
-  `fb_login` tinyint(4) NOT NULL DEFAULT '0',
-  `google_login` tinyint(4) NOT NULL DEFAULT '0',
+  `fb_login` tinyint(4) NOT NULL DEFAULT 0,
+  `google_login` tinyint(4) NOT NULL DEFAULT 0,
   `auth_token` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
   `account_verified` tinyint(4) NOT NULL,
   `otp_code` varchar(264) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -894,7 +895,10 @@ INSERT INTO `customers` (`id`, `app_id`, `customer_type`, `user_name`, `first_na
 (20, 2, 0, '9096164132', 'swap', 'king', 'swapnil.lucsoninfotech@gmail.com', '9096164132', 'UEozOVdSTk1kZXdaQU1sZXBWQ29ZUT09', '', 0, 0, 0, 'zyEjju3N12LXWhVyafxo', 0, NULL, NULL, '2018-03-06 13:40:16', '2018-03-06 13:52:44', 1),
 (21, 2, 1, 'SwapnilKinage', 'Swapnil', 'Kinage', 'swapnilkinage@gmail.com', '1234567890', 'UWJ1eFhvdWtkMmU4M05HUVJCN0RLdz09', '', 1, 1, 0, 'bKIAuW2G1LZt3YW49Jcp', 1, NULL, NULL, '2018-03-06 13:45:07', '2018-03-12 14:10:38', 1),
 (22, 5, 0, '9898989898', 'Henna', 'Patodiya', 'henna@gmail.com', '9898989898', 'WHhIdklmcEp4dDNhclpjR0JkMWVNQT09', '', 0, 0, 0, 'bIlinh5wNadK4awn2Qdy', 1, '4323', '2018-03-06 17:15:56', '2018-03-06 15:15:56', '2018-03-06 15:15:56', 1),
-(23, 2, 1, '1234567899', 'Viral', 'Gohel', 'viralgohel@gmail.com', '1234567899', 'WHhIdklmcEp4dDNhclpjR0JkMWVNQT09', '', 0, 0, 0, 'Ym4xEWV8jhj58O1akIBC', 1, '9983', '2018-03-12 14:47:39', '2018-03-12 12:47:39', '2018-03-12 12:47:39', 1);
+(23, 2, 1, '1234567899', 'Viral', 'Gohel', 'viralgohel@gmail.com', '1234567899', 'WHhIdklmcEp4dDNhclpjR0JkMWVNQT09', '', 0, 0, 0, 'Ym4xEWV8jhj58O1akIBC', 1, '9983', '2018-03-12 14:47:39', '2018-03-12 12:47:39', '2018-03-12 12:47:39', 1),
+(24, 1, 0, 'viralgohel', 'viral', 'gohel', 'viralgohel88@gmail.com', '2012673412', 'em5jK2xpdjhQOUxTbSs1dlV4RTkxQT09', '', 0, 0, 0, '', 0, NULL, NULL, '2020-01-29 17:03:31', '0000-00-00 00:00:00', 1),
+(25, 1, 0, 'viralgohel', 'viraldd', 'goheld', 'viralgohel8888@gmail.com', '9638181757', 'em5jK2xpdjhQOUxTbSs1dlV4RTkxQT09', '', 0, 0, 0, '', 0, '9431', '2020-08-05 18:45:34', '2020-08-05 16:45:05', '2020-09-15 15:52:16', 1),
+(26, 1, 0, 'viralgohel', 'viral', 'demo', 'admin@gmail.com', '01234567890', 'em5jK2xpdjhQOUxTbSs1dlV4RTkxQT09', '', 0, 0, 0, '', 0, NULL, NULL, '2020-12-09 17:32:34', '0000-00-00 00:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -936,7 +940,9 @@ INSERT INTO `customers_address` (`id`, `app_id`, `customer_id`, `address_name`, 
 (3, 4, 10, 'office', 'amit', 'parmar', 'amit@gmail.com', '9033782878', 'aaaakaakakak', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', 'nfjfkdk', '362000', 0.00, 0.00, '2018-03-01 15:54:29', '2018-03-01 15:54:29', 1),
 (4, 4, 15, 'bajrangwadi', 'dharamdev', 'vaghela', 'dharamdevvaghela@gmail.com', '9979798198', 'bajrabgwadi rajkot', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', 'pani ni taki', '360001', 0.00, 0.00, '2018-03-05 15:22:53', '2018-03-05 15:22:53', 1),
 (5, 2, 11, 'Office', 'Henna', 'Patodiya', 'test@gmail.com', '1234567890', '338,\n3rd floor,\nRoyal complex,\nDebar road', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', 'Near bhutkhana chowk', '360001', 0.00, 0.00, '2018-03-05 15:51:21', '2018-03-05 15:51:21', 1),
-(6, 3, 14, 'Office', 'Henna', 'Patodiya', 'teast@gmail.com', '1236547895', '\nRoyal complex,\nDebar Road', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', 'near bhutkhana chowk', '360001', 0.00, 0.00, '2018-03-05 15:56:05', '2018-03-05 15:56:05', 1);
+(6, 3, 14, 'Office', 'Henna', 'Patodiya', 'teast@gmail.com', '1236547895', '\nRoyal complex,\nDebar Road', 44, 'Rajkot', 12, 'Gujarat', 99, 'India', 'near bhutkhana chowk', '360001', 0.00, 0.00, '2018-03-05 15:56:05', '2018-03-05 15:56:05', 1),
+(7, 1, 26, '123 demo, rajkot gujarat', 'demo123', 'demo', 'viralgohel8@gmail.com', '01234567890', '123 demo, rajkot gujarat', 4, 'Anjar', 12, 'Gujarat', 99, 'India', '', '360450', NULL, NULL, '2020-12-09 18:07:46', '2020-12-09 18:07:46', 1),
+(8, 1, 24, '123 demo, rajkot gujarat', 'demo123', 'demo', 'viralgohel8@gmail.com', '01234567890', '123 demo, rajkot gujarat', 46, 'Ranip', 12, 'Gujarat', 99, 'India', 'testes', '360450', NULL, NULL, '2020-12-14 17:58:54', '2020-12-14 17:58:54', 1);
 
 -- --------------------------------------------------------
 
@@ -964,7 +970,13 @@ INSERT INTO `customers_cart` (`id`, `app_id`, `customer_id`, `product_id`, `vari
 (22, 3, 4, 111, 112, 1, '2018-03-01 13:35:08'),
 (27, 3, 14, 111, 112, 1, '2018-03-05 14:36:37'),
 (32, 2, 11, 10, 10, 1, '2018-03-05 18:45:40'),
-(33, 4, 6, 126, 127, 1, '2018-03-06 12:54:30');
+(33, 4, 6, 126, 127, 1, '2018-03-06 12:54:30'),
+(34, 1, 0, 84, 162, 1, '2020-02-26 12:20:20'),
+(37, 1, 1, 84, 84, 1, '2020-12-13 12:25:15'),
+(38, 1, 0, 84, 84, 1, '2020-12-14 16:45:11'),
+(39, 1, 0, 58, 58, 1, '2020-12-14 17:05:00'),
+(40, 1, 24, 58, 58, 2, '2020-12-14 17:05:42'),
+(41, 1, 0, 91, 91, 1, '2021-01-11 17:13:18');
 
 -- --------------------------------------------------------
 
@@ -1085,7 +1097,7 @@ CREATE TABLE `newsletter` (
   `email` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `status` tinyint(4) UNSIGNED NOT NULL DEFAULT '1' COMMENT '0 = Inactive, 1 = Active'
+  `status` tinyint(4) UNSIGNED NOT NULL DEFAULT 1 COMMENT '0 = Inactive, 1 = Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -1205,7 +1217,7 @@ CREATE TABLE `products` (
   `id` int(10) UNSIGNED NOT NULL,
   `app_id` int(10) UNSIGNED NOT NULL,
   `category_id` int(10) UNSIGNED NOT NULL,
-  `privacy_type` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT '0 = All, 1 = Premium Customer Only',
+  `privacy_type` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT '0 = All, 1 = Premium Customer Only',
   `sku_number` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
   `product_name` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
   `brand_id` int(10) UNSIGNED DEFAULT NULL,
@@ -1299,7 +1311,7 @@ INSERT INTO `products` (`id`, `app_id`, `category_id`, `privacy_type`, `sku_numb
 (70, 1, 44, 0, 'AB016', 'Swiss Beauty Makeup Remover (50ML)', 29, 'Swiss Beauty', 'Swiss Beauty Makeup Remover helps you to clean your skin with providing much-needed protection and nourishment\nNow removing make-up will not take long and in no time you get effective cleansing\nIt completely removes dirt, oil from the surface of your skin\nIt goes deeply into the pores and removes makeup completely\nAs a result, you get refreshed and clean feel', '1519454555-1475.jpg', 0, '', NULL, 0, 0, '2018-02-24 12:12:35', '2018-02-24 12:12:35', 1),
 (71, 1, 36, 0, 'AB017', 'Shoecom Stain Matte Lipstick Ultra Smooth (3Pcs) Russian Red, Raspberry, Love Apricot', 32, 'Shoecom', 'Ultimate Gloss\nSuper Fine Quality\nUltimate response\nLong lasting 12 hours\nSpecial Colors', '1519454555-3456.jpg', 0, '', NULL, 0, 0, '2018-02-24 12:12:35', '2018-02-24 12:12:35', 1),
 (72, 1, 36, 0, 'AB018', 'Swiss 3in1 Golden Stick (lipstick,eyeshadow,highlighter)', 33, 'Swiss', 'INTENSE GOLDEN COLOR', '1519454555-5932.jpg', 0, '', NULL, 0, 0, '2018-02-24 12:12:35', '2018-02-24 12:12:35', 1),
-(73, 1, 35, 0, 'AB019', 'ADS Color Series Makeup Kit (8 Eyeshadow, 1 Power Cake, 8 Lip Color, 2 Blusher)', 34, 'ADS', 'A3746-2 Contains:- 8 Eyeshadow 1 Power Cake 8 Lip Color 2 Blusher Please Note :-Product colour may slightly vary due to photographic lighting sources or your monitor settings', '1519454555-9999.jpg', 0, '', NULL, 0, 0, '2018-02-24 12:12:35', '2018-02-24 12:12:35', 1),
+(73, 1, 35, 0, 'AB019', 'ADS Color Series Makeup Kit (8 Eyeshadow, 1 Power Cake, 8 Lip Color, 2 Blusher)', 34, 'ADS', 'A3746-2 Contains:- 8 Eyeshadow 1 Power Cake 8 Lip Color 2 Blusher Please Note :-Product colour may slightly vary due to photographic lighting sources or your monitor settings', '1580291054-6101.jpg,1580291054-2137.jpg', 0, '', NULL, 0, 0, '2018-02-24 12:12:35', '2020-01-29 15:14:14', 1),
 (74, 1, 36, 0, 'AB020', 'Kylie Cosmetics Vacation Series Send Me More Nudes - 4x3.0 Grams', 35, 'Kylie Cosmetics', 'Kylie\nKylie Jenner\nKylie Jenner Send Me More Nudes\nKylie Send Me More Nudes\nKylie Cosmetics', '1519454555-9833.jpg', 0, '', NULL, 0, 0, '2018-02-24 12:12:35', '2018-02-24 12:12:35', 1),
 (75, 1, 36, 0, 'AB021', 'Girraj makeup world Kylie Jenner Ultra Matte Liquid Lipstick Set', 36, 'Girraj Makeup World', 'Kylie Cosmetics X Kim Kardashian KKW', '1519454555-9510.jpg', 0, '', NULL, 0, 0, '2018-02-24 12:12:35', '2018-02-24 12:12:35', 1),
 (76, 1, 36, 0, 'AB022', 'KYLIE VACAATION EDITION LIPSTICK SET imported brand high quality product', 36, 'Girraj Makeup World', 'KYLIE VACAATION EDITION LIPSTICK SET imported brand high quality product', '1519454555-5556.jpg', 0, '', NULL, 0, 0, '2018-02-24 12:12:35', '2018-02-24 12:12:35', 1),
@@ -1387,7 +1399,8 @@ INSERT INTO `products` (`id`, `app_id`, `category_id`, `privacy_type`, `sku_numb
 (157, 6, 90, 0, 'K002', 'Product Fifteen', 55, 'Brand Three', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', '1519894210-6051.jpg', 0, '', NULL, 0, 0, '2018-03-01 13:57:51', '2018-03-01 14:20:04', 1),
 (158, 4, 72, 0, '124', 'testm', 47, 'Brand One', 'testste', '1520241258-7357.jpg', 0, '', NULL, 0, 0, '2018-03-05 14:44:18', '2018-03-05 14:44:18', 1),
 (159, 4, 91, 0, 'sp.2', 'ring sp.2', 47, 'Brand One', '60 pic\r\n\r\n\r\n\r\n', '1520242718-6006.JPG', 0, '', NULL, 0, 0, '2018-03-05 15:08:38', '2018-03-05 15:08:38', 1),
-(160, 4, 0, 0, '', 'ANTIC', 56, '-', '12 PIC IN 1 BOX', '1520245495-7142.JPG', 0, '', NULL, 0, 0, '2018-03-05 15:54:55', '2018-03-05 15:54:55', 1);
+(160, 4, 0, 0, '', 'ANTIC', 56, '-', '12 PIC IN 1 BOX', '1520245495-7142.JPG', 0, '', NULL, 0, 0, '2018-03-05 15:54:55', '2018-03-05 15:54:55', 1),
+(161, 1, 30, 0, 'tests', 'testest', 56, '-', 'testestse', '1580289783-9034.png', 0, '', NULL, 0, 0, '2020-01-29 14:53:03', '2020-01-29 14:53:03', 1);
 
 -- --------------------------------------------------------
 
@@ -1658,7 +1671,7 @@ CREATE TABLE `push_notifications` (
   `msg_head` varchar(264) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `msg_body` varchar(264) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `notification_date` datetime NOT NULL,
-  `notification_flag` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+  `notification_flag` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1713,7 +1726,7 @@ INSERT INTO `sliders` (`id`, `app_id`, `slider_name`, `file_name`, `display_orde
 
 CREATE TABLE `states` (
   `id` int(10) UNSIGNED NOT NULL,
-  `country_id` int(11) NOT NULL DEFAULT '1',
+  `country_id` int(11) NOT NULL DEFAULT 1,
   `state_name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1787,7 +1800,7 @@ CREATE TABLE `stores` (
 --
 
 INSERT INTO `stores` (`id`, `app_id`, `store_name`, `email`, `mobile_1`, `mobile_2`, `latitude`, `longitude`, `address`, `city_id`, `city_name`, `created_at`, `updated_at`, `status`) VALUES
-(1, 1, 'Lucson eStore', 'varun@lucsoninfotech.com', '', '', 0.00, 0.00, 'Rajkot', 2, '', '2018-02-24 11:23:09', '0000-00-00 00:00:00', 1),
+(1, 1, 'Lucson eStore', 'varun@lucsoninfotech.com', '', '', 0.00, 0.00, 'Rajkot', 2, '', '2018-02-24 11:23:09', '0000-00-00 00:00:00', 0),
 (2, 2, 'Attitude Boutique', '', '', '', 0.00, 0.00, 'Jamnagar', 1, '', '2018-02-24 11:31:33', '0000-00-00 00:00:00', 1),
 (3, 3, 'Davda Tradelink', '', '', '', 0.00, 0.00, 'Rajkot', 3, '', '2018-02-28 17:11:59', '0000-00-00 00:00:00', 1),
 (4, 4, 'Swastik & Solanki', '', '9879211948', '', 0.00, 0.00, 'Rajkot', 6, '', '2018-02-28 17:14:37', '0000-00-00 00:00:00', 1),
@@ -1934,7 +1947,7 @@ CREATE TABLE `testimonials` (
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `file_name` varchar(264) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `status` tinyint(4) UNSIGNED NOT NULL DEFAULT '1' COMMENT '0 = Inactive, 1 = Active'
+  `status` tinyint(4) UNSIGNED NOT NULL DEFAULT 1 COMMENT '0 = Inactive, 1 = Active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -2215,7 +2228,7 @@ ALTER TABLE `admin_settings`
 -- AUTO_INCREMENT for table `app_details`
 --
 ALTER TABLE `app_details`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `app_display_options`
@@ -2257,7 +2270,7 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT for table `cities`
@@ -2281,19 +2294,19 @@ ALTER TABLE `countries`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `customers_address`
 --
 ALTER TABLE `customers_address`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `customers_cart`
 --
 ALTER TABLE `customers_cart`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `customers_wishlist`
@@ -2335,13 +2348,13 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `packages`
@@ -2353,7 +2366,7 @@ ALTER TABLE `packages`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 
 --
 -- AUTO_INCREMENT for table `products_brands`
