@@ -1,0 +1,362 @@
+/*	Tabs
+//	================================================== */
+
+.tabs {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+ul.tabs {
+	float: right;
+	width: 13%;
+	margin-left: 0%;
+}
+.tabs li {
+	margin: 0px 0px 25px 0px;
+	text-align: center;
+}
+.tabs li i {
+	font-size: 30px;
+	margin-bottom: 8px;
+	text-align: center;
+	display: block;
+}
+.tabs li a {
+	color: #454545;
+	display: block;
+	height: 98px;
+	padding: 22px 0px 20px 0px;
+	text-decoration: none;
+	font-size: 14px;
+	background-color: #eee;
+	position: relative; text-transform:uppercase; font-weight:bold;
+}
+.tabs li a:after {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(238, 238, 238, 0);
+	border-right-color: #eee;
+	border-width: 10px;
+	margin-top: -10px;
+}
+.tabs li.active a {
+	color: #fff;
+	background-color: #0fb7a4;
+}
+.tabs li.active a:after {
+	border-color: rgba(19, 175, 235, 0);
+	border-right-color: #0fb7a4;
+}
+.tabs-content {
+	float: left;
+	width: 83%;
+	padding: 0;
+	text-align: left;
+	margin-bottom: 40px;
+	border: 1px solid #e0e0e0;
+	background-color: #fff;
+}
+.tabs-content img {
+	width: 100%;
+}
+.tabs-content img.img_left2 {
+	width: auto;
+}
+.tabs-content .tabs-panel {
+	padding: 20px;
+}
+.tabs-content .tabs-panel .tab-title {
+	display: none;
+}
+ @media only screen and (min-width: 768px) and (max-width: 999px) {
+.tabs li i {
+	font-size: 20px;
+}
+}
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+ul.tabs {
+	width: 25%;
+	margin-right: 3%;
+}
+.tabs-content {
+	width: 72%;
+}
+}
+ @media only screen and (max-width: 479px) {
+ul.tabs {
+	width: 30%;
+	margin-right: 1%;
+}
+.tabs-content {
+	width: 69%;
+}
+}
+/* tab2*/
+.tabs2 {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.tabs2 li {
+	margin: 0;
+	text-align: left;
+}
+.tabs2 li a {
+	float: left;
+	color: #454545;
+	height: 40px;
+	padding: 0px 30px;
+	text-decoration: none;
+	line-height: 40px;
+	font-size: 14px;
+	background-color: #e3e3e3;
+	border-right: 1px solid #fff; text-transform:uppercase; font-weight:bold;
+}
+.tabs2 li.active a {
+	color: #fff;
+	background-color: #0fb7a4;
+}
+.tabs-content2 {
+	float: left;
+	width: 89%;
+	padding: 5% 5% 6% 5%;
+	text-align: left;
+	margin-bottom: 40px;
+	border: 1px solid #e3e3e3;
+}
+.tabs-content2 img.img_left2 {
+	width: auto;
+	margin-right: 25px;
+}
+.tabs-content2 .tabs-panel {
+	padding: 20px;
+}
+.tabs-content2 .tabs-panel2 .tab-title2 {
+	display: none;
+}
+.tabs-content2 .tabs-panel2.two {
+	padding: 20px 20px 14px 20px;
+}
+.tabs-content2.fullw {
+	float: left;
+	width: 100%;
+	padding: 2%;
+	text-align: left;
+	margin-bottom: 0px;
+	border: 1px solid #e3e3e3;
+	margin-bottom: 40px;
+	background: #fff;
+}
+/*	#Themes
+//	================================================== */
+
+#example-2 .tabs2 li {
+	width: 100px;
+	border: 1px solid #DDD;
+	border-right: 0;
+	background: #EEE;
+	cursor: pointer;
+	position: relative;
+	z-index: 999;
+}
+#example-2 .tabs2 li:last-child {
+	border-right: 1px solid #DDD;
+}
+#example-2 .tabs2 li.active {
+	border-bottom: 1px solid #FFF;
+	background: #FFF;
+}
+#example-2 .tabs-content2 {
+	border: 1px solid #DDD;
+	background: #FFF;
+	position: relative;
+	top: -1px;
+	z-index: 99;
+}
+#example-2 .tabs-content2 .tab-title {
+	color: #0b8593;
+}
+ @media only screen and (min-width: 1000px) and (max-width: 1169px) {
+.tabs2 li a {
+	padding: 0px 20px;
+}
+}
+ @media only screen and (min-width: 768px) and (max-width: 999px) {
+.tabs2 li a {
+	padding: 0px 9px;
+}
+}
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+.tabs2 li a {
+	padding: 0px 18px;
+}
+.tabs-content2.fullw {
+	padding: 5% 5% 6% 5%;
+}
+}
+ @media only screen and (max-width: 479px) {
+.tabs2 li a {
+	padding: 0px 10px;
+}
+.tabs-content2.fullw {
+	padding: 7% 7% 8% 7%;
+}
+}
+/*Tab3*/
+.tabs3 {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: 1px solid #e0e0e0;
+	border-bottom: none;
+	height: 54px;
+	width: 99%;
+	background-color: #eee;
+	position: relative;
+	z-index: 4;
+}
+.tabs3 li {
+	margin: 0;
+	text-align: left;
+}
+.tabs3 li a {
+	float: left;
+	color: #272727;
+	height: 54px;
+	padding: 0px 40px;
+	font-weight: 400;
+	text-decoration: none;
+	line-height: 50px;
+	font-size: 14px;
+	background-color: #eee;
+	border-right: 1px solid #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.tabs3 li a:hover {
+	color: #0fb7a4;
+}
+.tabs3 li.active a {
+	color: #0fb7a4;
+	border-bottom: 1px solid #fff;
+	background-color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.tabs-content3 {
+	float: left;
+	width: 91%;
+	padding: 2%;
+	text-align: left;
+	margin-bottom: 0px;
+	margin-top: -1px;
+	border: 1px solid #e0e0e0;
+	background-color: #fff;
+	position: relative;
+	z-index: 3;
+}
+.tabs-content3 img.img_left2 {
+	width: auto;
+	margin-right: 25px;
+	margin-bottom: 20px;
+}
+.tabs-content3 .tabs-panel {
+	padding: 20px;
+}
+.tabs-content3 .tabs-panel3 .tab-title3 {
+	display: none;
+}
+.tabs-content3.two {
+	width: 99%;
+	padding: 2%;
+	margin-bottom: 40px;
+}
+.tabs3.two li a {
+	padding: 0px 20px;
+}
+.tabs3.three li a {
+	padding: 0px 20px;
+}
+.tabs-content3.three {
+	width: 99%;
+	padding: 10% 8%;
+}
+/*	#Themes
+//	================================================== */
+
+#example-3 .tabs3 li {
+	width: 100px;
+	border: 1px solid #DDD;
+	border-right: 0;
+	background: #EEE;
+	cursor: pointer;
+	position: relative;
+	z-index: 999;
+}
+#example-3 .tabs3 li:last-child {
+	border-right: 1px solid #DDD;
+}
+#example-3 .tabs3 li.active {
+	border-bottom: 1px solid #FFF;
+	background: #FFF;
+}
+#example-3 .tabs-content3 {
+	border: 1px solid #DDD;
+	background: #FFF;
+	position: relative;
+	top: -1px;
+	z-index: 99;
+}
+#example-3 .tabs-content3 .tab-title {
+	color: #0b8593;
+}
+ @media only screen and (min-width: 1000px) and (max-width: 1169px) {
+.tabs3 li a {
+	padding: 0px 20px;
+}
+.tabs3.three li a {
+	padding: 0px 10px;
+}
+}
+ @media only screen and (min-width: 768px) and (max-width: 999px) {
+.tabs3 li a {
+	padding: 0px 10px;
+	font-size: 13px;
+}
+.tabs3.two li a {
+	padding: 0px 10px;
+}
+.tabs3.three li a {
+	padding: 0px 4px;
+}
+}
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+.tabs3 li a {
+	padding: 0px 10px;
+}
+.tabs-content3.three {
+	padding: 7% 5%;
+}
+}
+ @media only screen and (max-width: 479px) {
+.tabs3 li a {
+	padding: 0px 5px;
+	font-size: 12px;
+}
+.tabs-content3 img.img_left2 {
+	width: 100%;
+	margin-right: 0px;
+}
+.tabs3.three li a {
+	padding: 0px 10px;
+}
+}
+ul.list2{ padding:0px; margin:auto auto 10px;}
+ul.list2 li{ list-style:none;}
+.tabs-panel h1{ font-size:28px;}

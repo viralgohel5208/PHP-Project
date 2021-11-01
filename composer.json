@@ -1,0 +1,16 @@
+{
+    "name": "shiri/ecom",
+    "description": "E commerce Application",
+    "type": "project",
+    "license": "PREMIUM",
+    "authors": [
+        {
+            "name": "Shirish",
+            "email": "shirishm.makwana@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    }
+}
